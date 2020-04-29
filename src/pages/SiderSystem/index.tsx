@@ -25,7 +25,10 @@ const SiderSystem = () => {
     };
 
     return (
-        <div style={{ width: 180 }}>
+        <div style={{ width: 200 }}>
+            <Button type="primary" onClick={toggleCollapsed} style={{ marginBottom: 16 }}>
+                {React.createElement(collapsed ? MenuUnfoldOutlined : MenuFoldOutlined)}
+            </Button>
             <Menu
                 defaultSelectedKeys={['1']}
                 defaultOpenKeys={['sub1']}
