@@ -1,0 +1,23 @@
+.ant-layout-header {
+    height: 64px;
+    padding: 0 50px;
+    color: rgba(0, 0, 0, 0.65);
+    line-height: 64px;
+    background: #f0f2f5;
+}
+
+.ant-layout-footer {
+    padding: 24px 50px;
+    color: rgba(0, 0, 0, 0.65);
+    font-size: 14px;
+    background: #f0f2f5;
+}
+
+.ant-layout-sider {
+    position: relative;
+    /* fix firefox can't set width smaller than content on flex item */
+    min-width: 0;
+    background: #f0f2f5;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+}
