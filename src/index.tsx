@@ -16,6 +16,7 @@ const { Header, Content, Footer, Sider } = Layout;
 const { SubMenu } = Menu;
 
 class SiderPrincipal extends React.Component {
+  
   state = {
     collapsed: false,
   };
@@ -26,6 +27,13 @@ class SiderPrincipal extends React.Component {
   };
 
   render() {
+
+    const SiderSystem = (history: any) => {
+      return (
+          <Menu onClick={history.push("/sua_rota")} />
+      );
+    }
+
     return (
       <Layout style={{ minHeight: '100vh' }}>
         <Sider collapsible collapsed={this.state.collapsed} onCollapse={this.onCollapse}>
