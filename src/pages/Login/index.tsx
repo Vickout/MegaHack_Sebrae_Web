@@ -43,9 +43,20 @@ export default function Login() {
         >
           <Input.Password />
         </Form.Item>
-        <Form.Item {...tailLayout}>
-          <Button type="primary" htmlType="submit">Logar</Button>
-          <Button htmlType="button" onClick={onReset}>Limpar</Button>
+        <Form.Item>
+          <div>
+            <Button type="primary" block htmlType="submit">Login</Button>
+          </div>
+        </Form.Item>
+        <Form.Item>
+          <div>
+            <Button type="primary" block>Login with Facebook</Button>
+          </div>
+        </Form.Item>
+        <Form.Item>
+          <div>
+            <Button type="primary" danger block>Login with Google +</Button>
+          </div>
         </Form.Item>
       </Form>
     </Card>
