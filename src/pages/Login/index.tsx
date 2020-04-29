@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import { Button, Card, Form, Input } from 'antd';
+import React from 'react';
 import './styles.css';
-import { Form, Input, Button, Radio } from 'antd';
 
 export default function Login() {
 
@@ -22,32 +22,32 @@ export default function Login() {
     };
 
     return (
-        <div>
-          <Form
-            {...formItemLayout}
-            layout={formLayout}
-            form={form}
-            initialValues={{ layout: formLayout }}
-          >
-            <Form.Item 
-                label="Login"
-                name="username"
-                rules={[{ required: true, message: 'Login é obrigatório' }]}
-            >
-              <Input />
-            </Form.Item>
-            <Form.Item
-                label="Senha"
-                name="password"
-                rules={[{ required: true, message: 'Senha é obrigatória !' }]}
-            >
-              <Input.Password />
-            </Form.Item>
-            <Form.Item {...tailLayout}>
-                <Button type="primary" htmlType="submit">Logar</Button>
-                <Button htmlType="button" onClick={onReset}>Limpar</Button>
-            </Form.Item>
-          </Form>
-        </div>
-      );
+      <Card title="Formulário de login" style={{ width: '100%' }}>
+        <Form
+          {...formItemLayout}
+          layout={formLayout}
+          form={form}
+          initialValues={{ layout: formLayout }}
+        >
+        <Form.Item 
+          label="Login"
+          name="username"
+          rules={[{ required: true, message: 'Login é obrigatório' }]}
+        >
+          <Input />
+        </Form.Item>
+        <Form.Item
+          label="Senha"
+          name="password"
+          rules={[{ required: true, message: 'Senha é obrigatória !' }]}
+        >
+          <Input.Password />
+        </Form.Item>
+        <Form.Item {...tailLayout}>
+          <Button type="primary" htmlType="submit">Logar</Button>
+          <Button htmlType="button" onClick={onReset}>Limpar</Button>
+        </Form.Item>
+      </Form>
+    </Card>
+  );
 }
