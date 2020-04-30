@@ -8,7 +8,7 @@ import React from 'react';
 import './styles.css';
 
 
-export default function Register() {
+export default function Register({history}: any) {
 
     const [form] = Form.useForm();
 
@@ -27,11 +27,16 @@ export default function Register() {
         form.resetFields();
     };
 
+    const onFinish = () => {
+        history.push('/');
+    };
+
     const dateFormatList = ['DD/MM/YYYY', 'DD/MM/YY'];
 
     return (
         <Card title="Registro de usuários" style={{ width: '100%' }}>
             <Form
+                onFinish={onFinish}
                 {...formItemLayout}
                 layout={formLayout}
                 form={form}
