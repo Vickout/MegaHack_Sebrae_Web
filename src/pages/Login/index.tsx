@@ -13,10 +13,15 @@ export default function Login() {
           wrapperCol: { span: 14 },
     };
 
+    const onFinish = (values: any) => {
+      console.log('Received values of form: ', values);
+    };
+
     return (
       <>
         <Card title="Formulário de login" style={{ width: '100%' }}>
           <Form
+            onFinish={onFinish}
             {...formItemLayout}
             layout={formLayout}
             form={form}
