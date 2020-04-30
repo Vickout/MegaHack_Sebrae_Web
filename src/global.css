@@ -1,5 +1,56 @@
-#components-layout-demo-side .logo {
+.logo {
     height: 32px;
-    background: rgba(255, 255, 255, 0.2);
+    background: #fff;
     margin: 16px;
+}
+
+.site-layout-background {
+    background: #fff;
+}
+
+.ant-layout {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+    -ms-flex: auto;
+    flex: auto;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    /* fix firefox can't set height smaller than content on flex item */
+    min-height: 0;
+    background: #fff;
+}
+
+.ant-layout-header {
+    height: 64px;
+    padding: 0 50px;
+    color: rgba(0, 0, 0, 0.65);
+    line-height: 64px;
+    background: #3949ab;
+}
+
+.ant-layout-sider {
+    position: relative;
+    /* fix firefox can't set width smaller than content on flex item */
+    min-width: 0;
+    background: #fff;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+}
+
+.ant-layout-sider-trigger {
+    position: fixed;
+    bottom: 0;
+    z-index: 1;
+    height: 48px;
+    color: #002140;
+    line-height: 48px;
+    text-align: center;
+    background: #fff;
+    cursor: pointer;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
 }

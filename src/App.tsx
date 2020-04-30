@@ -1,9 +1,10 @@
-import { Breadcrumb, Layout } from "antd";
+import { Layout } from "antd";
 import React, { useState } from "react";
 import MenuSystem from "./pages/MenuSystem/MenuSystem";
 import Routes from "./routes";
+import HeaderSystem from "./pages/HeaderSystem";
 
-const { Header, Content, Footer, Sider } = Layout;
+const { Header, Content, Sider } = Layout;
 
 const App = () => {
 
@@ -16,22 +17,17 @@ const App = () => {
   return (
     <>
       <Layout style={{ minHeight: '100vh' }}>
+        <Header><HeaderSystem /></Header>
+        <Layout className="site-layout">
         <Sider collapsible collapsed={state} onCollapse={onCollapse}>
-          <div className="logo" />
           <MenuSystem />
         </Sider>
-        <Layout className="site-layout">
           <Header className="site-layout-background" style={{ padding: 0 }} />
           <Content>
-            <Breadcrumb>
-              <Breadcrumb.Item>Página inicial</Breadcrumb.Item>
-              <Breadcrumb.Item>Pagina atual</Breadcrumb.Item>
-            </Breadcrumb>
             <div className="site-layout-background" style={{ padding: 24, minHeight: 360 }}>
               <Routes />
             </div>
           </Content>
-          <Footer>2020</Footer>
         </Layout>
       </Layout>
     </>
