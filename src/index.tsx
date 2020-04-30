@@ -1,19 +1,9 @@
-import { Breadcrumb, Layout, Menu } from 'antd';
+import { Breadcrumb, Layout } from 'antd';
 import "antd/dist/antd.css";
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import App from "./App";
 import MenuSystem from "./pages/MenuSystem/MenuSystem";
-
-import {
-  DesktopOutlined,
-  FileOutlined, PieChartOutlined,
-  TeamOutlined,
-  UserOutlined
-} from '@ant-design/icons';
-import { ClickParam } from 'antd/lib/menu';
-
-const { SubMenu } = Menu;
 
 const { Header, Content, Footer, Sider } = Layout;
 
