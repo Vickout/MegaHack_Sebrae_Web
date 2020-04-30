@@ -14,6 +14,7 @@ export default function Login({history}: any) {
     };
 
     const onFinish = () => {
+      localStorage.setItem('logado', JSON.stringify(true));
       history.push('/calendario');
     };
 

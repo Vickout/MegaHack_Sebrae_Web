@@ -18,13 +18,13 @@ export default function MenuSystem() {
     <>
       <Menu theme="light" defaultSelectedKeys={['1']} mode="inline">
         <Menu.Item key="1" icon={<PieChartOutlined />}>
-          <Link to='register'> Registro </Link>
+          <Link to='register'> Página inicial </Link>
         </Menu.Item>
         <Menu.Item key="2" icon={<DesktopOutlined />}>
           <Link to='calendario'> Calendário </Link>
         </Menu.Item>
         <Menu.Item key="3" icon={<DesktopOutlined />}>
-          <Link to=''> Login </Link>
+          <Link to=''> Meu cadastro </Link>
         </Menu.Item>
         <SubMenu key="sub1" icon={<UserOutlined />} title="User">
           <Menu.Item key="4">Tom</Menu.Item>
