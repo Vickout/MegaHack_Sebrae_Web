@@ -6,18 +6,17 @@ import {
 } from '@ant-design/icons';
 import { Menu } from 'antd';
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const { SubMenu } = Menu;
 
-export default function MenuSystem(props: any) {
-
-  const SiderSystem = (history: any) => { return ( <Menu onClick={history.push("/calendario")} /> ); }
+export default function MenuSystem() {
 
   return (
     <>
       <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline">
-        <Menu.Item key="1" icon={<PieChartOutlined />} onClick={SiderSystem}>
-          Option 1
+        <Menu.Item key="1" icon={<PieChartOutlined />}>
+          <Link to='register'> Registro </Link>
         </Menu.Item>
         <Menu.Item key="2" icon={<DesktopOutlined />}>
           Option 2
