@@ -2,7 +2,7 @@ import { Button, Card, Form, Input } from 'antd';
 import React from 'react';
 import './styles.css';
 
-export default function Login() {
+export default function Login({history}: any) {
 
     const [form] = Form.useForm();
 
@@ -13,8 +13,8 @@ export default function Login() {
           wrapperCol: { span: 14 },
     };
 
-    const onFinish = (values: any) => {
-      console.log('Received values of form: ', values);
+    const onFinish = () => {
+      history.push('/calendario');
     };
 
     return (
