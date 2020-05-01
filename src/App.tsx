@@ -12,15 +12,6 @@ const auth = new Auth();
 export default function App({history}: any) {
 
   const [state, setState] = useState(false);
-  const [visible, setVisible] = useState(false);
-
-  const usuarioLogado = () => {
-    const logado: Boolean = auth.isAuthenticated();
-    logado
-      ? setVisible(true)
-      : setVisible(false);
-    return logado;
-  }
 
   const onCollapse = (collapsed: any) => {
     setState(collapsed);
@@ -31,7 +22,7 @@ export default function App({history}: any) {
       <Layout style={{ minHeight: '100vh' }}>
         <Header><HeaderSystem /></Header>
         <Layout className="site-layout">
-          <Sider collapsible={auth.isAuthenticated()} collapsed={!auth.isAuthenticated()} 
+          <Sider collapsible={auth.isAuthenticated()} collapsed={state} 
             onCollapse={onCollapse} >
             { auth.isAuthenticated() ? <MenuSystem /> : null}
           </Sider>
