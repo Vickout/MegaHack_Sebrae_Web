@@ -3,7 +3,7 @@ import './styles.css';
 
 const HeaderSystem = () => {
     return (
-        <div className="nomeSistema">Nome do sistema</div>
+        <div className="nomeSistema">Consilio</div>
     );
 }
 
