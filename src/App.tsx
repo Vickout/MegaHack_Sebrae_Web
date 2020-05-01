@@ -1,25 +1,26 @@
 import { Layout } from "antd";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
+import Auth from "./auth";
+import HeaderSystem from "./pages/HeaderSystem";
 import MenuSystem from "./pages/MenuSystem/MenuSystem";
 import Routes from "./routes";
-import HeaderSystem from "./pages/HeaderSystem";
 
 const { Header, Content, Sider } = Layout;
+
+const auth = new Auth();
 
 export default function App({history}: any) {
 
   const [state, setState] = useState(false);
   const [visible, setVisible] = useState(false);
 
-  const [usuarioLogado, setUsuarioLogado] = useState(localStorage.getItem('logado'));
-
-  useEffect(
-    () => {
-      if(usuarioLogado) {
-        setVisible(true)
-      }
-    }, [usuarioLogado]
-  );
+  const usuarioLogado = () => {
+    const logado: Boolean = auth.isAuthenticated();
+    logado
+      ? setVisible(true)
+      : setVisible(false);
+    return logado;
+  }
 
   const onCollapse = (collapsed: any) => {
     setState(collapsed);
@@ -30,8 +31,9 @@ export default function App({history}: any) {
       <Layout style={{ minHeight: '100vh' }}>
         <Header><HeaderSystem /></Header>
         <Layout className="site-layout">
-          <Sider collapsible={visible} collapsed={state} onCollapse={onCollapse} >
-            { visible ? <MenuSystem /> : null}
+          <Sider collapsible={auth.isAuthenticated()} collapsed={!auth.isAuthenticated()} 
+            onCollapse={onCollapse} >
+            { auth.isAuthenticated() ? <MenuSystem /> : null}
           </Sider>
           <Header className="site-layout-background" style={{ padding: 0 }} />
           <Content>

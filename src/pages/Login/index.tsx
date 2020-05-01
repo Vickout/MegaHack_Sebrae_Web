@@ -1,6 +1,9 @@
 import { Button, Card, Form, Input } from 'antd';
 import React from 'react';
+import Auth from '../../auth';
 import './styles.css';
+
+const auth = new Auth();
 
 export default function Login({history}: any) {
 
@@ -14,7 +17,7 @@ export default function Login({history}: any) {
     };
 
     const onFinish = () => {
-      localStorage.setItem('logado', JSON.stringify(true));
+      auth.login('null');
       history.push('/calendario');
     };
 
