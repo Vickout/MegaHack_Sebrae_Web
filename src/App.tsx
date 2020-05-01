@@ -22,11 +22,18 @@ export default function App({history}: any) {
       <Layout style={{ minHeight: '100vh' }}>
         <Header><HeaderSystem /></Header>
         <Layout className="site-layout">
-          <Sider collapsible={auth.isAuthenticated()} collapsed={state} 
-            onCollapse={onCollapse} >
-            { auth.isAuthenticated() ? <MenuSystem /> : null}
-          </Sider>
-          <Header className="site-layout-background" style={{ padding: 0 }} />
+          { 
+            auth.isAuthenticated() 
+            ? 
+            <>
+              <Sider collapsible={auth.isAuthenticated()} collapsed={state} 
+              onCollapse={onCollapse} >
+                <MenuSystem />
+              </Sider>
+              <Header className="site-layout-background" style={{ padding: 0 }} />
+            </>
+            : null
+          }
           <Content>
             <div className="site-layout-background" style={{ padding: 24, minHeight: 360 }}>
               <Routes />

@@ -1,0 +1,11 @@
+.card {
+    width: 100%;
+}
+
+.ant-card-head-title {
+    text-align: center;
+}
+
+.ant-form-item {
+    margin-left: 30%;
+}

@@ -23,7 +23,7 @@ export default function Login({history}: any) {
 
     return (
       <>
-        <Card title="Formulário de login" style={{ width: '100%' }}>
+        <Card title="Login" className="card">
           <Form
             onFinish={onFinish}
             {...formItemLayout}
