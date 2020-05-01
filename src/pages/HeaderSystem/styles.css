@@ -62,20 +62,20 @@
 .imagemOuro {
     color: #fff;
     margin: -40px 0px 0px 90px;
-    background-image: url("./m-ouro.svg");
+    background-image: url("../../img/m-ouro.svg");
     background-repeat: no-repeat;
 }
 
 .imagemPrata {
     color: #fff;
     margin: -64px 0px 0px 140px;
-    background-image: url("./m-prata.svg");
+    background-image: url("../../img/m-prata.svg");
     background-repeat: no-repeat;
 }
 
 .imagemBronze {
     color: #fff;
     margin: -64px 0px 0px 190px;
-    background-image: url("./m-bronze.svg");
+    background-image: url("../../img/m-bronze.svg");
     background-repeat: no-repeat;
 }
