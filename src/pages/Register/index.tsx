@@ -1,12 +1,6 @@
-import {
-    Button,
-    Card, DatePicker, Form,
-    Input,
-    Select
-} from 'antd';
+import { Button, Card, Form, Input, Select } from 'antd';
 import React from 'react';
 import './styles.css';
-
 
 export default function Register({history}: any) {
 
