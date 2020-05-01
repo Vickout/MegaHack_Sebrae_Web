@@ -25,7 +25,8 @@
 }
 
 .ant-layout-header {
-    height: 64px;
+    /* sem logar é 64px. Após logar é 100px*/
+    height: 100px;
     padding: 0 50px;
     color: rgba(0, 0, 0, 0.65);
     line-height: 64px;

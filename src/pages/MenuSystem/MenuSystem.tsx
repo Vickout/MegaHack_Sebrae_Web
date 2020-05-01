@@ -18,7 +18,7 @@ export default function MenuSystem() {
     <>
       <Menu theme="light" defaultSelectedKeys={['1']} mode="inline">
         <Menu.Item key="1" icon={<PieChartOutlined />}>
-          <Link to='register'> Página inicial </Link>
+          <Link to='inicio'> Página inicial </Link>
         </Menu.Item>
         <Menu.Item key="2" icon={<DesktopOutlined />}>
           <Link to='calendario'> Calendário </Link>

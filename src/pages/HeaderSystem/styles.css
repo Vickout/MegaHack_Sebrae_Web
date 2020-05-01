@@ -1,7 +1,81 @@
-.nomeSistema {
+.nomeLogoSistema {
     color: #fff;
     font-size: larger;
     background-image: url("./logo.jpg");
     background-repeat: no-repeat, repeat;
     padding-left: 100px;
+}
+
+.logo {
+    background-image: url("./logo.jpg");
+    background-repeat: no-repeat, repeat;
+    margin-left: 880px;
+    width: 100px;
+    height: 100px;
+}
+
+.nomeSistema {
+    margin: 10px 0px 0px 0px;
+    color: #fff;
+    font-size: xx-large;
+}
+
+.nomeUsuario {
+    margin: -15px 0px 0px 0px;
+    color: #fff;
+    font-size: large;
+    font-weight: bold;
+}
+
+.nomeEmpresa {
+    margin: -45px 0px 0px 0px;
+    color: #fff;
+    font-size: larger;
+}
+
+.conquista {
+    margin: -20px 0px 0px 0px;
+    color: #fff;
+    font-size: small;
+}
+
+.rank {
+    margin: -45px 0px 0px 0px;
+    color: #fff;
+    font-size: small;
+}
+
+.ant-divider-horizontal {
+    margin: -20px 0px 0px 0px !important;
+}
+
+.ant-progress-text {
+    color: #fff !important;
+}
+
+.imagem {
+    width: 20px;
+    height: 20px;
+    margin: -120px -50px 0px 90px;
+}
+
+.imagemOuro {
+    color: #fff;
+    margin: -40px 0px 0px 90px;
+    background-image: url("./m-ouro.svg");
+    background-repeat: no-repeat;
+}
+
+.imagemPrata {
+    color: #fff;
+    margin: -64px 0px 0px 140px;
+    background-image: url("./m-prata.svg");
+    background-repeat: no-repeat;
+}
+
+.imagemBronze {
+    color: #fff;
+    margin: -64px 0px 0px 190px;
+    background-image: url("./m-bronze.svg");
+    background-repeat: no-repeat;
 }
