@@ -1,4 +1,7 @@
 .nomeSistema {
     color: #fff;
     font-size: larger;
+    background-image: url("./logo.jpg");
+    background-repeat: no-repeat, repeat;
+    padding-left: 100px;
 }
