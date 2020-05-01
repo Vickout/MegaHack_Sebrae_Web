@@ -19,10 +19,6 @@ export default function Register({history}: any) {
           wrapperCol: { span: 14 },
     };
 
-    const tailLayout = {
-        wrapperCol: { offset: 8, span: 16 },
-    };
-
     const onReset = () => {
         form.resetFields();
     };
@@ -31,10 +27,8 @@ export default function Register({history}: any) {
         history.push('/');
     };
 
-    const dateFormatList = ['DD/MM/YYYY', 'DD/MM/YY'];
-
     return (
-        <Card title="Registro de usuários" style={{ width: '100%' }}>
+        <Card title="Registro de usuários" className="card">
             <Form
                 onFinish={onFinish}
                 {...formItemLayout}
@@ -76,14 +70,22 @@ export default function Register({history}: any) {
                         <Select.Option value="VI">Vitória</Select.Option>
                     </Select>
                 </Form.Item>
-                <Form.Item 
-                    label="Data de nascimento"
-                    name="nascimento"
-                    rules={[{ required: true, message: 'Data de nascimento é obrigatório' }]} >
-                    <DatePicker format={dateFormatList} />
+                <Form.Item
+                    label="Senha"
+                    name="password"
+                    rules={[{ required: true, message: 'Senha é obrigatória !' }]}
+                >
+                    <Input.Password />
                 </Form.Item>
-                <Form.Item {...tailLayout}>
-                    <Button type="primary" htmlType="submit">Logar</Button>
+                <Form.Item
+                    label="Confirma a senha"
+                    name="password"
+                    rules={[{ required: true, message: 'Confirmação de senha obrigatória !' }]}
+                >
+                    <Input.Password />
+                </Form.Item>
+                <Form.Item>
+                    <Button type="primary" htmlType="submit">Registrar</Button>
                     <Button htmlType="button" onClick={onReset}>Limpar</Button>
                 </Form.Item>
             </Form>

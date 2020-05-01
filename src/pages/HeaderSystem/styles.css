@@ -5,23 +5,3 @@
     background-repeat: no-repeat, repeat;
     padding-left: 100px;
 }
-
-.input {
-    padding-top: 15px;
-    width: 500px;
-}
-
-.avatar {
-    margin-left: 250px;
-    background-color: '#3949ab'
-}
-
-.nomeUsuario {
-    color: #fff;
-    font-size: larger;
-    padding-left: 130px;
-}
-
-.icone {
-    padding-left: 190px;
-}
