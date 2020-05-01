@@ -2,6 +2,7 @@ import { Button, Card, Form, Input } from 'antd';
 import React from 'react';
 import Auth from '../../auth';
 import './styles.css';
+import { Link } from 'react-router-dom';
 
 const auth = new Auth();
 
@@ -60,6 +61,7 @@ export default function Login({history}: any) {
               <Button type="primary" danger block>Login with Google +</Button>
             </div>
           </Form.Item>
+          <div className="naoRegistro">Não é cadastrado ? <Link to="/register">Clique aqui</Link> para registrar</div>
         </Form>
       </Card>
     </>
