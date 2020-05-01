@@ -1,13 +1,13 @@
 .nomeLogoSistema {
     color: #fff;
     font-size: larger;
-    background-image: url("./logo.jpg");
+    background-image: url("../../img/logotipo.svg");
     background-repeat: no-repeat, repeat;
     padding-left: 100px;
 }
 
 .logo {
-    background-image: url("./logo.jpg");
+    background-image: url("../../img/logotipo.svg");
     background-repeat: no-repeat, repeat;
     margin-left: 880px;
     width: 100px;
